@@ -22,6 +22,14 @@ pages does not expose the application source.
 1. Settings → Pages → Source: `main`, folder `/ (root)`
 2. Push to `main`; the pages are live ~1 minute later
 
+## MyShot downloads
+
+The product page links to GitHub's `releases/latest/download` endpoint for the
+Linux AppImage and Windows installer. CI creates a GitHub Release only for tags
+that exactly match `vX.Y.Z-live` (for example, `v0.1.11-live`). All other tags
+are test builds: their installers remain workflow artifacts and must not be
+linked as public downloads.
+
 ## Keeping it accurate
 
 > [!IMPORTANT]
@@ -29,5 +37,4 @@ pages does not expose the application source.
 > data handling changes — server-side accounts, telemetry, a new third-party
 > processor — **update this policy before that release ships**, not after.
 > Sprint 9 in the main repository revises it for the v2 backend.
-
 
