@@ -24,11 +24,11 @@ pages does not expose the application source.
 
 ## MyShot downloads
 
-The product page links to GitHub's `releases/latest/download` endpoint for the
-Linux AppImage and Windows installer. CI creates a GitHub Release only for tags
-that exactly match `vX.Y.Z-live` (for example, `v0.1.11-live`). All other tags
-are test builds: their installers remain workflow artifacts and must not be
-linked as public downloads.
+The product page links to this public repository's `releases/latest/download`
+endpoint for the Linux AppImage and Windows installer. MyShot's private CI
+publishes verified stable `vX.Y.Z-live` packages here, with signed in-app update
+metadata. New visitors always download the latest stable package. Other tags
+remain private test builds and must not be linked as public downloads.
 
 ## Keeping it accurate
 
